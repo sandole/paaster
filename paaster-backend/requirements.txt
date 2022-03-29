@@ -1,0 +1,9 @@
+nanoid
+starlette
+motor
+aiofiles
+python-dotenv
+uvicorn
+bcrypt
+aioredis
+slowapi

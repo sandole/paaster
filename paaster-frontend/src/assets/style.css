@@ -1,0 +1,242 @@
+* { 
+    margin: 0; 
+    padding: 0; 
+}
+
+:root {
+    --darkBg: #191724;
+    --textWhite: rgb(238, 238, 238);
+    --toastBarBackground: #565174;
+    --toastBackground: #211f29;
+    --toastContainerTop: 6em;
+}
+
+@font-face {
+    font-family: IMBPlexMono;
+    src: url('fonts/IBMPlexMono-Regular.ttf');
+}
+
+body {
+    font-family: IMBPlexMono;
+    color: var(--textWhite);
+    overflow-x: hidden;
+    background-color: var(--darkBg);
+}
+
+nav {
+    background-color: #0c0b10;
+    border-bottom: 2.5px solid var(--textWhite);
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    padding: 1em;
+    justify-content: space-between;
+}
+
+nav .nav-right {
+    display: flex;
+    justify-content: space-around;
+}
+
+.encrypted {
+    color: rgb(7, 155, 32);
+    padding: .5em 1em;
+    border-radius: 1em;
+}
+
+a {
+    text-decoration: none;
+    color: var(--textWhite)
+}
+
+a:hover {
+    color: rgb(157, 157, 157);
+}
+
+textarea {
+    height: 100vh;
+    width: 100%;
+    resize: none;
+    border: none;
+    color: var(--textWhite);
+    background-color: var(--darkBg);
+    padding: 1em;
+    outline: none;
+}
+
+input {
+    transition: 100ms;
+    color: var(--textWhite);
+    background-color: var(--darkBg);
+    border: 0 solid #3b3457;;
+    height: 1em;
+    padding: .5em 1em;
+}
+
+input:focus {
+    transition: 200ms;
+    outline: none;
+    border-bottom: 2.5px solid #3b3457;
+}
+
+button {
+    border-radius: 1em;
+}
+
+.pass-feedback {
+    font-size: .8em;
+    margin-left: .2em;
+}
+
+.paste-owner {
+    position: absolute;
+    top:8;
+    right:0;
+    margin-right: 1em;
+    margin-top: 1em;
+    display: flex;
+    flex-direction: column;
+}
+
+.paste-owner select {
+    border-radius: 1em;
+    padding: .3em 1em;
+    border: none;
+    background-color: #24222e;
+    color: var(--textWhite);
+}
+
+.paste-owner button {
+    transition: 300ms;
+    text-align: center;
+    border: none;
+    padding: .5em 1em;
+    background-color: rgb(121, 30, 10);
+    color: var(--textWhite);
+    outline: none;
+}
+
+.paste-owner button:hover {
+    transition: 300ms;
+    background-color: rgb(90, 27, 13);
+    cursor: pointer;
+}
+
+.dark-button {
+    transition: 300ms;
+    text-align: center;
+    border: none;
+    padding: .5em 1em;
+    background-color: var(--darkBg);
+    color: var(--textWhite);
+    outline: none;
+}
+
+.dark-button:hover {
+    transition: 300ms;
+    background-color: #16151d;
+    cursor: pointer;
+}
+
+.dark-button:disabled {
+    cursor: default;
+    background-color: #0d0d13;
+}
+
+/* 🏳️‍⚧️🏳️‍⚧️🏳️‍⚧️🏳️‍⚧️🏳️‍⚧️ */
+.trans-button {
+    transition: 300ms;
+    background-color: transparent;
+    border: none;
+    color: var(--textWhite);
+    text-align: left;
+}
+
+.trans-button:hover {
+    transition: 300ms;
+    color: rgb(157, 157, 157);
+    cursor: pointer;
+}
+/* 🏳️‍⚧️🏳️‍⚧️🏳️‍⚧️🏳️‍⚧️🏳️‍⚧️ */
+
+.hljs {
+    min-height: 100vh;
+    white-space: pre-wrap;
+    margin-bottom: 60vh;
+    overflow-wrap: break-word;
+}
+
+::-moz-selection, ::selection {
+    color: rgb(255, 255, 255) !important;
+    background: rgb(75, 75, 72) !important;
+}
+
+.pastes {
+    padding: 1em;
+}
+
+.pastes ul {
+    list-style: none;
+}
+
+.paste-item {
+    padding: 1.5em;
+    background-color: #0c0b10;
+    margin-bottom: .5em;
+    border-radius: 1em;
+}
+
+.paste-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.delete-after-lab {
+    font-size: .7em;
+    margin-top: .8em;
+    text-align: center;
+}
+
+progress {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    margin-bottom: .5em;
+    border-radius: 1em;
+    background-color: var(--darkBg) !important;
+    border: none;
+}
+
+progress::-webkit-progress-bar {
+    border-radius: 1em;
+    background-color: var(--darkBg) !important;
+}
+
+progress::-webkit-progress-value {
+    border-radius: 1em;
+    background-color: #3b3457;
+}
+
+progress::-moz-progress-bar {
+    border-radius: 1em;
+    background-color: #3b3457;
+}
+
+footer {
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    footer { 
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+        height: 3rem;
+        background-color: #0c0b10;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: .5em;
+    }
+}
